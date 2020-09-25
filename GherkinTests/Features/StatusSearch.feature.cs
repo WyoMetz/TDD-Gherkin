@@ -35,8 +35,8 @@ namespace GherkinTests.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "StatusSearch", "\tIn order to *something*\r\n\tAs a *user type?*\r\n\tI want to verify a Location\'s Stat" +
-                    "us", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "StatusSearch", "\tIn order to *something*\r\n\tAs a *user type?*\r\n\tI want to verify within a Range th" +
+                    "at a Location is Active\r\n\tRange: TA <= 5, BLDG > 1300, Null or Empty Room", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -77,7 +77,7 @@ namespace GherkinTests.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Active or Not Active Status")]
         [NUnit.Framework.CategoryAttribute("StatusTest")]
-        [NUnit.Framework.TestCaseAttribute("3", "215", "1UTIL5", "NOT ACTIVE", null)]
+        [NUnit.Framework.TestCaseAttribute("3", "555", "1UTIL5", "NOT ACTIVE", null)]
         [NUnit.Framework.TestCaseAttribute("3", "1353", "", "ACTIVE", null)]
         [NUnit.Framework.TestCaseAttribute("5", "1302", "NULL", "ACTIVE", null)]
         [NUnit.Framework.TestCaseAttribute("5", "2240", "104", "NOT ACTIVE", null)]
@@ -99,7 +99,7 @@ namespace GherkinTests.Features
             argumentsOfScenario.Add("ROOM", rOOM);
             argumentsOfScenario.Add("STATUS", sTATUS);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Active or Not Active Status", null, tagsOfScenario, argumentsOfScenario);
-#line 7
+#line 8
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -119,11 +119,8 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 8
- testRunner.Given(string.Format("The building number {0} exists", bLDG_NUM), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
 #line 9
- testRunner.When(string.Format("TA is {0}", tA), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given(string.Format("The Technical Area is {0}", tA), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 10
  testRunner.And(string.Format("BLDG_NUM is {0}", bLDG_NUM), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -132,7 +129,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And(string.Format("Room Number is {0}", rOOM), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 12
- testRunner.Then(string.Format("the Status should be {0}", sTATUS), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("the Status is {0}", sTATUS), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
