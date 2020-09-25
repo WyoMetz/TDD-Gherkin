@@ -17,33 +17,34 @@ namespace GherkinTests.Steps
             _scenarioContext = scenarioContext;
         }
 
-        [Given(@"The building number (.*) exists")]
-        public void GivenTheBuildingNumberExists(int p0)
+        [Given(@"The building number ([0-9]*[A-Z]*) exists")]
+        public void GivenTheBuildingNumberExists(int buildingNumber)
         {
-            _scenarioContext.Pending();
+            Console.WriteLine($"Exists Building Number {buildingNumber}");
         }
 
-        [When(@"TA is (.*)")]
-        public void WhenTAIs(int p0)
+        [When(@"TA is ([0-9]*[A-Z]*)")]
+        public void WhenTAIs(int taNumber)
         {
-            _scenarioContext.Pending();
+            Console.WriteLine($"When TA is {taNumber}");
         }
 
-        [When(@"BLDG_NUM is (.*)")]
-        public void WhenBLDG_NUMIs(int p0)
+        [When(@"BLDG_NUM is ([0-9]*[A-Z]*)")]
+        public void WhenBLDG_NUMIs(int buildingNumber)
         {
-            _scenarioContext.Pending();
+            Console.WriteLine($"When BLDG is {buildingNumber}");
         }
 
-        [When(@"Room Number is “(.*)”")]
-        public void WhenRoomNumberIs(int p0)
+        [When(@"Room Number is ([0-9]*[A-Z]*[0-9]*)")]
+        public void WhenRoomNumberIs(string roomString)
         {
-            _scenarioContext.Pending();
+            Console.WriteLine($"When Room is {roomString}");
         }
 
-        [Then(@"the Status should be “NOT ACTIVE”")]
-        public void ThenTheStatusShouldBeNOTACTIVE()
+        [Then(@"the Status should be ([A-Z]*\s*[A-Z]*)")]
+        public void ThenTheStatusShouldBeNOTACTIVE(string status)
         {
+            Console.WriteLine($"Status Is {status}");
             _scenarioContext.Pending();
         }
     }

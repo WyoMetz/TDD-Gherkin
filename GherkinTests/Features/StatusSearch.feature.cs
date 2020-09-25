@@ -77,13 +77,13 @@ namespace GherkinTests.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Active or Not Active Status")]
         [NUnit.Framework.CategoryAttribute("StatusTest")]
-        [NUnit.Framework.TestCaseAttribute("3", "215", "\"1UTIL5\"", "\"NOT ACTIVE", null)]
-        [NUnit.Framework.TestCaseAttribute("3", "1353", "", "“ACTIVE”", null)]
-        [NUnit.Framework.TestCaseAttribute("5", "1302", "NULL", "“ACTIVE”", null)]
-        [NUnit.Framework.TestCaseAttribute("5", "2240", "104", "“NOT ACTIVE”", null)]
-        [NUnit.Framework.TestCaseAttribute("6", "122", "NULL", "“NOT ACTIVE”", null)]
-        [NUnit.Framework.TestCaseAttribute("0", "1249", "“101”", "“NOT ACTIVE”", null)]
-        [NUnit.Framework.TestCaseAttribute("0", "1325", "NULL", "“ACTIVE”", null)]
+        [NUnit.Framework.TestCaseAttribute("3", "215", "1UTIL5", "NOT ACTIVE", null)]
+        [NUnit.Framework.TestCaseAttribute("3", "1353", "", "ACTIVE", null)]
+        [NUnit.Framework.TestCaseAttribute("5", "1302", "NULL", "ACTIVE", null)]
+        [NUnit.Framework.TestCaseAttribute("5", "2240", "104", "NOT ACTIVE", null)]
+        [NUnit.Framework.TestCaseAttribute("6", "122", "NULL", "NOT ACTIVE", null)]
+        [NUnit.Framework.TestCaseAttribute("0", "1249", "101", "NOT ACTIVE", null)]
+        [NUnit.Framework.TestCaseAttribute("0", "1325", "NULL", "ACTIVE", null)]
         public virtual void ActiveOrNotActiveStatus(string tA, string bLDG_NUM, string rOOM, string sTATUS, string[] exampleTags)
         {
             string[] @__tags = new string[] {
